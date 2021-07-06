@@ -20,10 +20,10 @@ namespace csharpcore
         {
             foreach (Item item in Items)
             {
-                Item generatedItem = ItemFactory.Create(item);
-                generatedItem.UpdateQuality();
-                item.SellIn = generatedItem.SellIn;
-                item.Quality = generatedItem.Quality;
+                //Item generatedItem = ItemFactory.Create(item);
+                item.UpdateQuality();
+                //item.SellIn = generatedItem.SellIn;
+                //item.Quality = generatedItem.Quality;
 
             }
         }

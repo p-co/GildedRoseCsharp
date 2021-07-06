@@ -31,7 +31,7 @@ namespace csharpcore
         [InlineData("Sulfuras, Hand of Ragnaros", 0, 5, 0, 5)]
         public void AssertDecrementsCorrectlyAccordingToItemType(string itemName, int sellIn, int quality, int expectedSellIn, int expectedQuality)
         {
-            IList<Item> Items = new List<Item> { new Item { Name = itemName, SellIn = sellIn, Quality = quality } };
+            IList<Item> Items = new List<Item> { ItemFactory.Create(itemName, sellIn, quality) };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
             Assert.Equal(expectedQuality, Items[0].Quality);
